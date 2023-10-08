@@ -1,23 +1,55 @@
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
 
-const Purchase = () => {
-  return (
-    <>
-      <h1>購入画面</h1>
-      <h2>購入する土地（1件ずつ？orまとめて購入？⇒カート機能）</h2>
-      <table border={1}>
-        <tr><td>1</td><td>いしのまき-い</td><td className="price">10,000</td></tr>
-      </table>
-      <h2>注文者情報の入力</h2>
-      <label>
-        Text input: <input name="myInput" defaultValue="Some initial value" />
-      </label>
-      <hr />
+class FormSubmitComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formData: {
+        firstName: '',
+        lastName: '',
+        email: '',
+      },
+    };
+  }
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState((prevState) => ({
+      formData: {
+        ...prevState.formData,
+        [name]: value,
+      },
+    }));
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    // フォームデータをサーバーに送信または他の処理を行う
+    console.log('フォームデータが送信されました:', this.state.formData);
+  };
+
+  render() {
+    const { formData } = this.state;
+
+    return (
       <div>
-        <Link to={`/`}>ホームに戻る</Link>
+        <h2>フォーム送信画面</h2>
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label htmlFor="yournameJP">名前</label>
+            <input type="text" id="yournameJP" name="yournameJP"
+              value={formData.yournameJP} onChange={this.handleInputChange}/>
+          </div>
+          <div>
+            <label htmlFor="yournameENG">Name</label>
+            <input type="text" id="yournameENG" name="yournameENG"
+              value={formData.yournameENG} onChange={this.handleInputChange}/>
+          </div>
+          <button type="submit">送信</button>
+        </form>
       </div>
-    </>
-  );
-};
+    );
+  }
+}
 
-export default Purchase;
+export default FormSubmitComponent;
