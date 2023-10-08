@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import './styles.css';
 
 class FormSubmitComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       formData: {
-        firstName: '',
-        lastName: '',
+        yournameJP: '',
+        yournameENG: '',
         email: '',
+        postalCode: '',
+        address: '',
       },
     };
   }
@@ -64,22 +67,46 @@ class FormSubmitComponent extends Component {
         <h2>フォーム送信画面</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="firstName">名</label>
+            <label htmlFor="yournameJP">名前（漢字）</label>
             <input
               type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
+              id="yournameJP"
+              name="yournameJP"
+              value={formData.yournameJP}
+              placeholder='伊藤 学'
               onChange={this.handleInputChange}
             />
           </div>
           <div>
-            <label htmlFor="lastName">姓</label>
+            <label htmlFor="yournameENG">Name（アルファベット）</label>
             <input
               type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
+              id="yournameENG"
+              name="yournameENG"
+              value={formData.yournameENG}
+              placeholder='Ito Manabu'
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="yournameENG">郵便番号</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              value={formData.postalCode}
+              placeholder='9860854'
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="yournameENG">住所</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              placeholder='宮城県石巻市大街道北１丁目１−１６'
               onChange={this.handleInputChange}
             />
           </div>
@@ -90,6 +117,7 @@ class FormSubmitComponent extends Component {
               id="email"
               name="email"
               value={formData.email}
+              placeholder='m-Ito@sample.co.jp'
               onChange={this.handleInputChange}
             />
           </div>
