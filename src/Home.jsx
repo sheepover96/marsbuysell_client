@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { MARS_LAND_LIST } from "./utils/constant";
 import { css } from '@emotion/css'
-import Mars from "./static/mars.png"
+import Mars from "./static/mars.png";
+import './styles.css';
 
 const Home = () => {
   return (
