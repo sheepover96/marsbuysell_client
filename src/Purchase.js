@@ -24,8 +24,36 @@ class FormSubmitComponent extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // フォームデータをサーバーに送信または他の処理を行う
-    console.log('フォームデータが送信されました:', this.state.formData);
+    const apiUrl = 'https://api.example.com/submit-form';
+
+    // POSTリクエストの設定
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state.formData),
+    };
+
+    // Fetch APIを使用してリクエストを送信
+    fetch(apiUrl, requestOptions)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('ネットワークエラー');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // レスポンスデータを処理する
+        console.log('サーバーレスポンス:', data);
+        // 成功した場合、ここで適切なアクションを実行
+        this.props.history.push('/thanks');
+      })
+      .catch((error) => {
+        // エラーハンドリング
+        console.error('エラー:', error);
+        // 失敗した場合、エラーメッセージを表示または適切なアクションを実行
+      });
   };
 
   render() {
@@ -36,14 +64,34 @@ class FormSubmitComponent extends Component {
         <h2>フォーム送信画面</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="yournameJP">名前</label>
-            <input type="text" id="yournameJP" name="yournameJP"
-              value={formData.yournameJP} onChange={this.handleInputChange}/>
+            <label htmlFor="firstName">名</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={this.handleInputChange}
+            />
           </div>
           <div>
-            <label htmlFor="yournameENG">Name</label>
-            <input type="text" id="yournameENG" name="yournameENG"
-              value={formData.yournameENG} onChange={this.handleInputChange}/>
+            <label htmlFor="lastName">姓</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="email">メールアドレス</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={this.handleInputChange}
+            />
           </div>
           <button type="submit">送信</button>
         </form>
