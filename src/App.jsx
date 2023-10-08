@@ -13,6 +13,7 @@ const App = () => {
         <Route path={`/thanks/`} element={<Thanks />} />
         <Route path={`/*/`} element={<NotFound />} />
       </Routes>
+      <div style={{ height: '200px' }}/>
     </BrowserRouter>
   );
 };
