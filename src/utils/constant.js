@@ -1,4 +1,6 @@
 import VastitasBorealis from '../static/lands/vastitas_borealis.jpg'
+import HellasPlanitia from '../static/lands/hellas_planitia.jpg'
+import NoachisTerra from '../static/lands/noachis_terra.jpg'
 
 export const MARS_LAND_LIST = {
   1: {
@@ -35,6 +37,23 @@ export const MARS_LAND_LIST = {
   },
   7: {
     name: 'エリジウム平原',
+    address: '火星1-1-1',
+    price: 10000,
+  },
+  8: {
+    name: 'ノアキス・テラ',
+    address: '火星1-1-1',
+    price: 10000,
+    image: HellasPlanitia,
+  },
+  9: {
+    name: 'ヘラス平原',
+    address: '火星1-1-1',
+    price: 10000,
+    image: HellasPlanitia,
+  },
+  9: {
+    name: 'へスペリア平原',
     address: '火星1-1-1',
     price: 10000,
   },

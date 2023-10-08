@@ -25,7 +25,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${1}`}>ヴァスティタス・ボレアリス</Link>
+          <Link class="my-parts" to={`/purchase/${1}`}>ヴァスティタス・ボレアリス</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -34,7 +34,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${2}`}>アラビア・テラ</Link>
+          <Link class="my-parts" to={`/purchase/${2}`}>アラビア・テラ</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -43,7 +43,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${3}`}>シルティス・メジャー山</Link>
+          <Link class="my-parts" to={`/purchase/${3}`}>シルティス・メジャー山</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -52,7 +52,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${4}`}>ユートピア平原</Link>
+          <Link class="my-parts" to={`/purchase/${4}`}>ユートピア平原</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -61,7 +61,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${5}`}>エリジウム山</Link>
+          <Link class="my-parts" to={`/purchase/${5}`}>エリジウム山</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -70,7 +70,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${6}`}>ティレナ・テラ</Link>
+          <Link class="my-parts" to={`/purchase/${6}`}>ティレナ・テラ</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -79,7 +79,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${7}`}>エリジウム平原</Link>
+          <Link class="my-parts" to={`/purchase/${7}`}>エリジウム平原</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -88,7 +88,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${8}`}>ノアキス・テラ</Link>
+          <Link class="my-parts" to={`/purchase/${8}`}>ノアキス・テラ</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -97,7 +97,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${9}`}>エラス平原</Link>
+          <Link class="my-parts" to={`/purchase/${9}`}>ヘラス平原</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -106,10 +106,11 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${10}`}>へスペリア平原</Link>
+          <Link class="my-parts" to={`/purchase/${10}`}>へスペリア平原</Link>
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
+      <Link to={`/recommend`}>おすすめの土地</Link>
     </div>
   );
 };
