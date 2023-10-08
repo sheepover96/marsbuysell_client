@@ -84,6 +84,17 @@ function FormSubmitComponent() {
       <form onSubmit={handleSubmit}>
         {/* フォームの入力部分 */}
         <div>
+        <label htmlFor="yournameENG">Name（アルファベット）</label>
+            <input
+              type="text"
+              id="yournameENG"
+              name="yournameENG"
+              value={formData.yournameENG}
+              placeholder='Ito Manabu'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
           <label htmlFor="yournameJP">名前（漢字）</label>
           <input
             type="text"
@@ -94,7 +105,39 @@ function FormSubmitComponent() {
             onChange={handleInputChange}
           />
         </div>
-        {/* 他のフォーム入力部分 */}
+        <div>
+        <label htmlFor="yournameENG">郵便番号</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              value={formData.postalCode}
+              placeholder='9860854'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+        <label htmlFor="yournameENG">住所</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              placeholder='宮城県石巻市大街道北１丁目１−１６'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+        <label htmlFor="email">メールアドレス</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              placeholder='m-Ito@sample.co.jp'
+            onChange={handleInputChange}
+          />
+        </div>
         <button type="submit">送信</button>
         <div>
           <Link to={`/thanks/`}>購入を確定する</Link>
