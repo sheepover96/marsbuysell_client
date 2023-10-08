@@ -3,7 +3,7 @@ import { MARS_LAND_LIST } from "./utils/constant";
 
 const Purchase = () => {
   const { id } = useParams();
-  const mars_land_info = MARS_LAND_LIST[id];
+  // const mars_land_info = MARS_LAND_LIST[id];
 
   return (
     <>
@@ -11,12 +11,12 @@ const Purchase = () => {
       <h2>購入する土地（1件ずつ？orまとめて購入？⇒カート機能）</h2>
       <br />
 
-      <div>
+      {/* <div>
         {mars_land_info.name}
       </div>
       <div>
         {mars_land_info.price}
-      </div>
+      </div> */}
 
       <br />
 
