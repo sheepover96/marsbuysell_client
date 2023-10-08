@@ -21,11 +21,92 @@ const Home = () => {
         <div style={{
           position: 'absolute',
           top: 100,
+          left: 300,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${1}`}>ヴァスティタス・ボレアリス</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 250,
+          left: 100,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${2}`}>アラビア・テラ</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 250,
+          left: 250,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${3}`}>シルティス・メジャー山</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 250,
+          left: 450,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${4}`}>ユートピア平原</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 250,
+          left: 600,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${5}`}>エリジウム山</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 400,
           left: 400,
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${1}`} class="my-parts"><font color="#FFFFFF">ヴァスティタス・ボレアリス</font></Link>
+          <Link to={`/purchase/${6}`}>ティレナ・テラ</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 400,
+          left: 600,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${7}`}>エリジウム平原</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 550,
+          left: 100,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${8}`}>ノアキス・テラ</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 550,
+          left: 350,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${9}`}>エラス平原</Link>
+        </div>
+        <div style={{
+          position: 'absolute',
+          top: 550,
+          left: 600,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${10}`}>へスペリア平原</Link>
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
