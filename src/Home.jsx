@@ -14,10 +14,20 @@ const Home = () => {
       }
     }>
       <h1>Mars Land Buy&Sell</h1>
-      <div>
+      <div style={{
+        position: 'relative',
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 100,
+          left: 400,
+          background: 'rgba(0, 0, 0, 0.1)',
+          zIndex: '0',
+        }}>
+          <Link to={`/purchase/${1}`}>ヴァスティタス・ボレアリス</Link>
+        </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
-      <div>地図を挿入</div>
       <div>
         {
           Object.keys(MARS_LAND_LIST).map( land_id => {
