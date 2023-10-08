@@ -5,7 +5,6 @@ import './styles.css';
 
 function FormSubmitComponent() {
   const { id } = useParams();
-  console.log(id)
   const mars_land_info = MARS_LAND_LIST[id];
   const history = useNavigate();
 
@@ -78,6 +77,8 @@ function FormSubmitComponent() {
       <h2>
         金額：{mars_land_info.price} 円
       </h2>
+
+      <img src={mars_land_info?.image} alt="" width="600px" />
 
       <h3 style={{ width: '600px' }}>{mars_land_info.description}</h3>
 
