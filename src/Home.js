@@ -4,7 +4,7 @@ import './styles.css';
 const Home = () => {
   return (
     <>
-      <h1>ホーム</h1>
+      <h1>火星土地一覧</h1>
       地図を挿入
       <div>
         購入は<Link to={`/purchase/`}>こちら（想定では地図上の土地をクリックで遷移）</Link>

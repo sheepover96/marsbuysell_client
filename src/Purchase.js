@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import './styles.css';
 
 class FormSubmitComponent extends Component {
@@ -64,7 +65,9 @@ class FormSubmitComponent extends Component {
 
     return (
       <div>
-        <h2>フォーム送信画面</h2>
+        <h2>購入する土地</h2>
+
+        <h2>購入者情報の入力</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="yournameJP">名前（漢字）</label>
@@ -122,9 +125,17 @@ class FormSubmitComponent extends Component {
             />
           </div>
           <button type="submit">送信</button>
+          <div>
+          <Link to={`/thanks/`}>購入を確定する（送信ボタンに紐付く）</Link>
+          </div>
+          <div>
+          <Link to="/">土地一覧に戻る</Link>
+          <p>注意：入力した情報は破棄されます</p>
+          </div>
         </form>
       </div>
     );
+ 
   }
 }
 
