@@ -97,7 +97,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link class="my-parts" to={`/purchase/${9}`}>エラス平原</Link>
+          <Link class="my-parts" to={`/purchase/${9}`}>ヘラス平原</Link>
         </div>
         <div style={{
           position: 'absolute',
