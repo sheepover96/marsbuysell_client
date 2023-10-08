@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { MARS_LAND_LIST } from "./utils/constant";
 import { css } from '@emotion/css'
-import Mars from "./static/mars.png";
 import './styles.css';
+import Mars from "./static/mars.png"
+import Title from "./static/title.png"
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         alignItems: 'center',
       }
     }>
-      <h1>Mars Land Buy&Sell</h1>
+      <img src={Title} alt="" width="600px" />
       <div style={{
         position: 'relative',
       }}>
@@ -27,27 +28,6 @@ const Home = () => {
           <Link to={`/purchase/${1}`}>ヴァスティタス・ボレアリス</Link>
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
-      </div>
-      <div>
-        {
-          Object.keys(MARS_LAND_LIST).map( land_id => {
-            let land = MARS_LAND_LIST[land_id];
-            return (
-              <div key={land_id}>
-                <div>
-                  {land.name}
-                </div>
-                <div>
-                  {land.price}
-                </div>
-              </div>
-            )
-          }
-          )
-        }
-      </div>
-      <div>
-        購入は<Link to={`/purchase/`}>こちら（想定では地図上の土地をクリックで遷移）</Link>
       </div>
     </div>
   );

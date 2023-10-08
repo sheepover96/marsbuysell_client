@@ -63,13 +63,23 @@ function FormSubmitComponent() {
   };
 
   return (
-    <div>
-      <h2>購入者情報の入力</h2>
-      <h2>購入する土地</h2>
-      <br />
-      <div>{mars_land_info.name}</div>
-      <div>{mars_land_info.price}</div>
-      <br />
+    <div style={
+      {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }
+    }>
+      <h1>購入画面</h1>
+
+      <h2>
+        土地名：{mars_land_info.name}
+      </h2>
+      <h2>
+        金額：{mars_land_info.price} 円
+      </h2>
+
+      <h3 style={{ width: '600px' }}>{mars_land_info.description}</h3>
 
       <form onSubmit={handleSubmit}>
         {/* フォームの入力部分 */}
@@ -93,6 +103,13 @@ function FormSubmitComponent() {
           <Link to="/">土地一覧に戻る（注意：入力した情報は破棄されます）</Link>
         </div>
       </form>
+
+      <br/>
+
+      <hr />
+      <div>
+        <Link to={`/`}>ホームに戻る</Link>
+      </div>
     </div>
   );
 }
