@@ -110,6 +110,7 @@ const Home = () => {
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
+      <Link to={`/recommend`}>おすすめの土地</Link>
     </div>
   );
 };
