@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { MARS_LAND_LIST } from './utils/constant';
 import './styles.css';
 
@@ -7,7 +7,7 @@ function FormSubmitComponent() {
   const { id } = useParams();
   console.log(id)
   const mars_land_info = MARS_LAND_LIST[id];
-  const history = useHistory();
+  const history = useNavigate();
 
   const [formData, setFormData] = useState({
     yournameJP: '',
