@@ -50,3 +50,12 @@ h1 {
     background-color: #ffa500;
   }
   
+  .my-parts {
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+  }
+  .my-parts:hover {
+    cursor: pointer;
+    transform: scale(2.0);
+  }

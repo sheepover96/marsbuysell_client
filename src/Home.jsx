@@ -25,7 +25,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link to={`/purchase/${1}`}>ヴァスティタス・ボレアリス</Link>
+          <Link to={`/purchase/${1}`} class="my-parts"><font color="#FFFFFF">ヴァスティタス・ボレアリス</font></Link>
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
