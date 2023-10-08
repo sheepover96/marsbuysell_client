@@ -80,7 +80,7 @@ function FormSubmitComponent() {
 
       <img src={mars_land_info?.image} alt="" width="600px" />
 
-      <h3 style={{ width: '600px' }}>{mars_land_info.description}</h3>
+      <h3 style={{whiteSpace: 'pre-line'}}>{mars_land_info.description}</h3>
 
       <form onSubmit={handleSubmit}>
         {/* フォームの入力部分 */}
