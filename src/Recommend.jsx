@@ -13,12 +13,12 @@ const Recommend = () => {
   return (
     
     <div style={
-      {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }
-    }>
+        {
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }
+      }>
       <img src={Title} alt="" width="600px" />
       <div style={{
         position: 'relative',
