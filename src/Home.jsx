@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
 import { MARS_LAND_LIST } from "./utils/constant";
 import { css } from '@emotion/css'
 import './styles.css';
@@ -6,6 +7,11 @@ import Mars from "./static/mars.png"
 import Title from "./static/title.png"
 
 const Home = () => {
+  // コンポーネントがマウントされた後にページのトップにスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div style={
       {

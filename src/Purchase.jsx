@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { MARS_LAND_LIST } from './utils/constant';
 import './styles.css';
 
 function FormSubmitComponent() {
+  // コンポーネントがマウントされた後にページのトップにスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+    
   const { id } = useParams();
   const mars_land_info = MARS_LAND_LIST[id];
   const history = useNavigate();
