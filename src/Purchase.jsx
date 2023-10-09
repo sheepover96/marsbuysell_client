@@ -83,8 +83,7 @@ function FormSubmitComponent() {
 
       <h2>
         土地名：{mars_land_info.name}
-      </h2>
-      <h2>
+        <br />
         金額：{mars_land_info.price} 円
       </h2>
 

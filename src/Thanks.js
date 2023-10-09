@@ -31,6 +31,7 @@ const Thanks = () => {
           position: 'relative',
         }}>
         </div>
+        <h1></h1>
         <h1>購入ありがとうございました</h1>
         <img src={Mars4} alt="" width="800px" height="1000px" />
         <div style={{
@@ -49,7 +50,7 @@ const Thanks = () => {
         </div>
         <br />
         <div>
-          <Link class="links" to={`/`}>ホームに戻る</Link>
+          <Link class="links" to={`/`}>土地一覧に戻る</Link>
         </div>
       </div>
     </>

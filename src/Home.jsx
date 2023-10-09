@@ -21,6 +21,7 @@ const Home = () => {
       }
     }>
       <img src={Title} alt="" width="600px" />
+      <h1></h1>
       <div style={{
         position: 'relative',
       }}>
