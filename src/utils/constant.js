@@ -1,6 +1,10 @@
 import VastitasBorealis from '../static/lands/vastitas_borealis.jpg'
 import HellasPlanitia from '../static/lands/hellas_planitia.jpg'
 import NoachisTerra from '../static/lands/noachis_terra.jpg'
+<<<<<<< HEAD
+=======
+import ArabiaTera from '../static/lands/arabia-tera.jpg'
+>>>>>>> main
 
 export const MARS_LAND_LIST = {
   1: {
