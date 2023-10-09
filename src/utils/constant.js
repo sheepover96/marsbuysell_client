@@ -71,7 +71,7 @@ export const MARS_LAND_LIST = {
     name: 'ノアキス・テラ',
     address: '火星1-1-1',
     price: 10000,
-    image: HellasPlanitia,
+    image: NoachisTerra,
   },
   9: {
     name: 'ヘラス平原',
