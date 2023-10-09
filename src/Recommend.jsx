@@ -2,9 +2,16 @@ import { Link } from "react-router-dom";
 import { css } from '@emotion/css'
 import './styles.css';
 import Title from "./static/title.png"
+import React, { useEffect } from 'react';
 
 const Recommend = () => {
+  // コンポーネントがマウントされた後にページのトップにスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
+    
     <div style={
       {
         display: 'flex',
