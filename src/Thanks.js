@@ -3,8 +3,9 @@ import React, { useEffect } from 'react';
 import './styles.css';
 import Title from "./static/title.png"
 import Mars4 from "./static/syoumeisyo.jpg"
+import Result from "./static/result.png"
 
-const Thanks = () => {
+const Thanks = (proodOfPurchage) => {
   // コンポーネントがマウントされた後にページのトップにスクロール
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,6 +37,10 @@ const Thanks = () => {
         <div style={{
           position: 'relative',
         }}>
+        <br />
+
+        <img src={Result} alt="" width="600px" />
+
         <br />
            <button
     onClick={handleDownload}

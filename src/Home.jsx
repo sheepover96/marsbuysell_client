@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import React, { useEffect } from 'react';
 import { MARS_LAND_LIST } from "./utils/constant";
@@ -11,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <div style={
       {
@@ -122,4 +123,3 @@ const Home = () => {
 };
 
 export default Home;
-

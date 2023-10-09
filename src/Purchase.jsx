@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { MARS_LAND_LIST } from './utils/constant';
 import Title from "./static/title.png"
 import './styles.css';
+import { apiPost } from './utils/api';
 
 function FormSubmitComponent() {
   // コンポーネントがマウントされた後にページのトップにスクロール
@@ -15,11 +16,14 @@ function FormSubmitComponent() {
   const history = useNavigate();
 
   const [formData, setFormData] = useState({
-    yournameJP: '',
-    yournameENG: '',
+    price: mars_land_info.price,
+    nameKanji: '',
+    nameAlphabet: '',
     email: '',
-    postalCode: '',
+    postcode: '',
     address: '',
+    placeName: mars_land_info.name,
+    placeAddress: mars_land_info.address
   });
 
   const handleInputChange = (event) => {
@@ -32,7 +36,8 @@ function FormSubmitComponent() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const apiUrl = 'https://api.example.com/submit-form';
+    const apiUrl = 'http://127.0.0.1:5000/purchase';
+    console.log(formData);
 
     // POSTリクエストの設定
     const requestOptions = {
@@ -49,16 +54,18 @@ function FormSubmitComponent() {
     // Fetch APIを使用してリクエストを送信
     fetch(apiUrl, requestOptions)
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           throw new Error('ネットワークエラー');
         }
-        return response.json();
+        return response.data;
       })
       .then((data) => {
         // レスポンスデータを処理する
         console.log('サーバーレスポンス:', data);
         // 成功した場合、ここで適切なアクションを実行
-        history.push('/thanks');
+        // history.push('/thanks')
+        history('/thanks', { proofOfPurchase: data } );
       })
       .catch((error) => {
         // エラーハンドリング
@@ -98,9 +105,8 @@ function FormSubmitComponent() {
         <label htmlFor="yournameENG">Name（アルファベット）</label>
             <input
               type="text"
-              id="yournameENG"
-              name="yournameENG"
-              value={formData.yournameENG}
+              name="nameAlphabet"
+              value={formData.name_alphabet}
               placeholder='Ito Manabu'
             onChange={handleInputChange}
           />
@@ -109,9 +115,8 @@ function FormSubmitComponent() {
           <label htmlFor="yournameJP">名前（漢字）</label>
           <input
             type="text"
-            id="yournameJP"
-            name="yournameJP"
-            value={formData.yournameJP}
+            name="nameKanji"
+            value={formData.name_kanji}
             placeholder='伊藤 学'
             onChange={handleInputChange}
           />
@@ -120,9 +125,8 @@ function FormSubmitComponent() {
         <label htmlFor="yournameENG">郵便番号</label>
             <input
               type="text"
-              id="postalCode"
-              name="postalCode"
-              value={formData.postalCode}
+              name="postcode"
+              value={formData.postcode}
               placeholder='9860854'
             onChange={handleInputChange}
           />
@@ -131,7 +135,6 @@ function FormSubmitComponent() {
         <label htmlFor="yournameENG">住所</label>
             <input
               type="text"
-              id="address"
               name="address"
               value={formData.address}
               placeholder='宮城県石巻市大街道北１丁目１−１６'
