@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
 import { MARS_LAND_LIST } from "./utils/constant";
 import { css } from '@emotion/css'
 import './styles.css';
@@ -6,6 +7,11 @@ import Mars from "./static/mars.png"
 import Title from "./static/title.png"
 
 const Home = () => {
+  // コンポーネントがマウントされた後にページのトップにスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div style={
       {
@@ -97,7 +103,7 @@ const Home = () => {
           background: 'rgba(0, 0, 0, 0.1)',
           zIndex: '0',
         }}>
-          <Link class="my-parts" to={`/purchase/${9}`}>エラス平原</Link>
+          <Link class="my-parts" to={`/purchase/${9}`}>ヘラス平原</Link>
         </div>
         <div style={{
           position: 'absolute',
@@ -110,8 +116,10 @@ const Home = () => {
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
+      <Link to={`/recommend`}>おすすめの土地</Link>
     </div>
   );
 };
 
 export default Home;
+
