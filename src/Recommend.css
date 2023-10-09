@@ -1,0 +1,16 @@
+/* Recommendページ用のスタイル */
+.recommend-page {
+    /* ここにRecommendページのスタイルを定義 */
+  }
+  
+  /* h1 タグを中央寄せに */
+  .recommend-page h1 {
+    text-align: center;
+  }
+  
+  /* h4 タグと p タグを左寄せに */
+  .recommend-page h4,
+  .recommend-page p {
+    text-align: left;
+  }
+  

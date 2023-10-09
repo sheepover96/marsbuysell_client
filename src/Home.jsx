@@ -44,6 +44,7 @@ const Home = () => {
             background: 'rgba(0, 0, 0, 0.1)'
           }}
       ></button>
+      <h1></h1>
       <div style={{
         position: 'relative',
         
@@ -180,7 +181,9 @@ const Home = () => {
         </div>
         <img src={Mars} alt="" width="800px" height="800px" />
       </div>
-      <Link to={`/recommend`}>おすすめの土地</Link>
+      <br />
+      <h4>column</h4>
+      <Link class="links" to={`/recommend`}>あなたにぴったりの土地を探そう！人気の土地10選</Link>
     </div>
   );
 };

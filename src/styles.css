@@ -2,6 +2,7 @@
 /* h1要素のスタイル */
 h1 {
   font-size: 24px;
+  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, "MS Pゴシック", "MS ゴシック", Osaka, "ＭＳ Ｐゴシック", sans-serif;
   color: #f9f9f9;
   margin-bottom: 20px;
 }
@@ -9,6 +10,7 @@ h1 {
 /* h3要素のスタイル */
 h3 {
   font-size: 20px;
+  font-family: "游ゴシック体", "Yu Gothic", "YuGothic", "ヒラギノ角ゴ", "Hiragino Kaku Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   color: #f9f9f9;
   margin-bottom: 20px;
   text-align: left;
@@ -58,6 +60,7 @@ h3 {
     background-color: #ffa500;
   }
   
+  /* 土地名のスタイル */
   .my-parts {
     display: inline-block;
     transition: all .3s ease 0s;
@@ -67,4 +70,11 @@ h3 {
   .my-parts:hover {
     cursor: pointer;
     transform: scale(1.3);
+  }
+
+  /* リンクのスタイル */
+  .links {
+    display: inline-block;
+    transition: all .3s ease 0s;
+    color: #f9f9f9;
   }
