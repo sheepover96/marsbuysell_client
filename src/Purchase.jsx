@@ -74,34 +74,33 @@ function FormSubmitComponent() {
         flexDirection: 'column',
         alignItems: 'center',
       }
-    }>
-    <img src={Title} alt="" width="600px" />
-      <div style={{
-        position: 'relative',
-      }}></div>
-      <h1>購入画面</h1>
-
+      }>
+      <img src={Title} alt="" width="600px" />
+        <div style={{
+          position: 'relative',
+          }}>
+        </div>
+      <h1></h1>
+      <h1>■土地情報■</h1>
       <h2>
         土地名：{mars_land_info.name}
-      </h2>
-      <h2>
+        <br />
         金額：{mars_land_info.price} 円
       </h2>
-
       <img src={mars_land_info?.image} alt="" width="600px" />
-
       <h3 style={{whiteSpace: 'pre-line'}}>{mars_land_info.description}</h3>
-
+      <h1></h1>
+      <h1>■購入者情報の入力■</h1>
       <form onSubmit={handleSubmit}>
         {/* フォームの入力部分 */}
         <div>
-        <label htmlFor="yournameENG">Name（アルファベット）</label>
-            <input
-              type="text"
-              id="yournameENG"
-              name="yournameENG"
-              value={formData.yournameENG}
-              placeholder='Ito Manabu'
+          <label htmlFor="yournameENG">Name（アルファベット）</label>
+          <input
+            type="text"
+            id="yournameENG"
+            name="yournameENG"
+            value={formData.yournameENG}
+            placeholder='Ito Manabu'
             onChange={handleInputChange}
           />
         </div>
@@ -117,53 +116,49 @@ function FormSubmitComponent() {
           />
         </div>
         <div>
-        <label htmlFor="yournameENG">郵便番号</label>
-            <input
-              type="text"
-              id="postalCode"
-              name="postalCode"
-              value={formData.postalCode}
-              placeholder='9860854'
+          <label htmlFor="yournameENG">郵便番号</label>
+          <input
+            type="text"
+            id="postalCode"
+            name="postalCode"
+            value={formData.postalCode}
+            placeholder='9860854'
             onChange={handleInputChange}
           />
         </div>
         <div>
-        <label htmlFor="yournameENG">住所</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              value={formData.address}
-              placeholder='宮城県石巻市大街道北１丁目１−１６'
+          <label htmlFor="yournameENG">住所</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value={formData.address}
+            placeholder='宮城県石巻市大街道北１丁目１−１６'
             onChange={handleInputChange}
           />
         </div>
         <div>
-        <label htmlFor="email">メールアドレス</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              placeholder='m-Ito@sample.co.jp'
+          <label htmlFor="email">メールアドレス</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            placeholder='m-Ito@sample.co.jp'
             onChange={handleInputChange}
           />
         </div>
-        <button type="submit">送信</button>
+        <button type="submit">購入を確定</button>
         <div>
-          <Link to={`/thanks/`}>購入を確定する</Link>
+          <Link class="links" to={`/thanks/`}>購入を確定する（送信ボタンの代わり）</Link>
         </div>
+        <br />
+        <br />
         <div>
-          <Link to="/">土地一覧に戻る（注意：入力した情報は破棄されます）</Link>
+          <Link class="links" to="/">土地一覧に戻る（注意：入力した情報は破棄されます）</Link>
         </div>
       </form>
-
       <br/>
-
-      <hr />
-      <div>
-        <Link to={`/`}>ホームに戻る</Link>
-      </div>
     </div>
   );
 }
