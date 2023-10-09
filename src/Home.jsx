@@ -13,9 +13,7 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-<<<<<<< HEAD
-=======
-  
+
   // ボタンの状態を管理するためのstateを設定
   const [triangleDirection, setTriangleDirection] = useState('right');
   // ボタンがクリックされたときの処理
@@ -23,7 +21,6 @@ const Home = () => {
     // 三角形の方向をトグル
     setTriangleDirection(triangleDirection === 'right' ? 'left' : 'right');
   };
->>>>>>> main
 
   return (
     <div style={
@@ -33,7 +30,7 @@ const Home = () => {
         alignItems: 'center',
       }
     }>
-      
+
       <img src={Title} alt="" width="600px" />
       <button
           onClick={handleClick}
@@ -51,7 +48,7 @@ const Home = () => {
       <h1></h1>
       <div style={{
         position: 'relative',
-        
+
       }}>
         <div style={{display: `${triangleDirection === 'right' ? '' : 'none'}`}}>
           <div style={{

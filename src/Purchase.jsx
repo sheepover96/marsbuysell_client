@@ -134,7 +134,6 @@ function FormSubmitComponent() {
           <label htmlFor="yournameENG">住所</label>
           <input
             type="text"
-            type="text"
             name="address"
             value={formData.address}
             placeholder='宮城県石巻市大街道北１丁目１−１６'
