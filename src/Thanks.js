@@ -36,8 +36,19 @@ const Thanks = () => {
         <div style={{
           position: 'relative',
         }}>
-          <button onClick={handleDownload}>画像をダウンロード</button>
+        <br />
+           <button
+    onClick={handleDownload}
+    style={{
+      backgroundColor: "orange", // ボタンの背景色を設定
+      color: 'white', // ボタンの文字色を設定
+      border: 'none', // ボーダーを削除
+      padding: '10px 20px', // ボタンのパディングを設定
+      cursor: 'pointer', // マウスオーバー時にカーソルを変更
+    }}
+  >証明書のダウンロードはこちら</button>
         </div>
+        <br />
         <div>
           <Link to={`/`}>ホームに戻る</Link>
         </div>
