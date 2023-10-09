@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { MARS_LAND_LIST } from './utils/constant';
+import Title from "./static/title.png"
 import './styles.css';
 
 function FormSubmitComponent() {
@@ -8,7 +9,7 @@ function FormSubmitComponent() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-    
+
   const { id } = useParams();
   const mars_land_info = MARS_LAND_LIST[id];
   const history = useNavigate();
@@ -74,6 +75,10 @@ function FormSubmitComponent() {
         alignItems: 'center',
       }
     }>
+    <img src={Title} alt="" width="600px" />
+      <div style={{
+        position: 'relative',
+      }}></div>
       <h1>購入画面</h1>
 
       <h2>
